@@ -18,7 +18,7 @@ The code will then parse the what the string represents in this format, each imp
 
 **`Γ`** is the stack alphabet, the characters the machine pushes onto its stack. Must be enclosed in `{}` and each element separated by a comma.
 
-**`δ`** is the transition function input. Must be enclosed in `{}`. Each element must be of the form `(q,x,y)->(qnew,z)`, q is the current state, x is the current character being read, `y` is the current top of stack. Then `qnew` is the new state, `z` is what happens to the stack. All transitions must be of this form for the machine to work.
+**`δ`** is the transition function input. Must be enclosed in `{}`. Each element must be of the form `(q,x,y)->(qnew,z)`, `q` is the current state, `x` is the current character being read, `y` is the current top of stack. Then `qnew` is the new state, `z` is what happens to the stack. All transitions must be of this form for the machine to work.
 
 **`q0`** is simply the starting state.
 
