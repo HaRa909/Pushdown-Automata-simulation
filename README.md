@@ -58,7 +58,7 @@ This will return true and we can prove why by tracing the computation.
 **This string is an encoding of the following machine and string to test on it:**
 ![Image](Images/notin%20PDA%20set.png)
 
-We can prove why this doesn't return true very trivially, it is simply that there is no accept state that 'q0' or `q2` have a valid transition to, q3 is the only accept state and impossible to get to given any amount of time, meaning this string is not in the set.
+We can prove why this doesn't return true very trivially, it is simply that there is no accept state that `q0` or `q2` have a valid transition to, q3 is the only accept state and impossible to get to given any amount of time, meaning this string is not in the set.
 
 
 
