@@ -60,7 +60,7 @@ We can prove why this doesn't return true very trivially, it is simply that ther
 
 # Interesting Notes
 
-To deal with nondeterminism issues, an example of this being an endless loop of attempting epsilon/spontaneous transitions, the `OtherStack.java` file contains what is essentially a state of computation that is also places in a Hashset named `history`, this hashset tracks the amount of states the computation went through, the state it was in, the stack's size, and what was the top element of the stack. This ensures protection against cycles that could easily start with spontaneous transitions that there is no cost to get to. 
+To deal with nondeterminism issues, an example of this being an endless loop of attempting epsilon/spontaneous transitions, the `OtherStack.java` file contains what is essentially a state of computation that is also places in a Hashset named `history`. This hashset tracks the amount of states the computation went through, the state it was in, the stack's size, and what was the top element of the stack. This hashset ensures protection against cycles that could easily start with spontaneous transitions that there is no cost to get to. 
 
 There are also different treatment of transitions, namely the epsilon/spontaneous transitions, with how there are some that don't affect the stack, some that add to the stack with no cost, some that pop from the stack with no cost, and some that allow state transitions with no cost. 
 
