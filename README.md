@@ -1,7 +1,5 @@
 # Pushdown-Automata-simulation
-This code will check to see if a certain string is recognized in the language of a pushdown automata.
-
-This is part of a computational problem on Turing decidability. The problem is listed in detail below.
+This code will check to see if a certain string is recognized in the language of a pushdown automata. This is part of a computational problem on Turing decidability. The problem is listed in detail below.
 ![Image](Images/Screenshot%202024-12-10%20155719.png)
 
 This code checks to see if a certain string encoding of a PDA along with a string is in its language or not, returning `TRUE` if yes, or `FALSE` if no. 
@@ -59,6 +57,13 @@ This will return true and we can prove why by tracing the computation.
 ![Image](Images/notin%20PDA%20set.png)
 
 We can prove why this doesn't return true very trivially, it is simply that there is no accept state that `q0` or `q2` have a valid transition to, q3 is the only accept state and impossible to get to given any amount of time, meaning this string is not in the set.
+
+#Interesting Notes
+
+To deal with nondeterminism issues, an example of this being an endless loop of attempting epsilon/spontaneous transitions, the `OtherStack.java` file contains what is essentially a state of computation that is also places in a Hashset named `history`, this hashset tracks the amount of states the computation went through, the state it was in, the stack's size, and what was the top element of the stack. This ensures protection against cycles that could easily start with spontaneous transitions that there is no cost to get to. 
+
+There are also different treatment of transitions, namely the epsilon/spontaneous transitions, with how there are some that don't affect the stack, some that add to the stack with no cost, some that pop from the stack with no cost, and some that allow state transitions with no cost. 
+
 
 
 
