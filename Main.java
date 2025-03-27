@@ -1,42 +1,24 @@
 
-public class Main
-{
-	public static void main(String[] args) {
+public class Main {
 
-		String inSet = "{q0,q1,q2,q3,q4,q5,q6},{1,0},{e,0,$},{(q0,e,e)->(q1,$),(q1,e,e)->(q2,e),"+
-		"(q1,e,e)->(q4,e),(q2,1,e)->(q2,0),(q2,e,e)->(q3,e),(q2,e,e)->(q5,e),"+
-		"(q4,0,e)->(q2,0),(q4,e,e)->(q5,e),(q5,1,0)->(q5,e),(q3,0,0)->(q3,e),"+
-		"(q5,e,$)->(q6,e),(q3,e,$)->(q6,e)},q0,{q6},11111111111111";
-		newPDA testIN = new newPDA(inSet);
-		boolean TESTINCHECK = testIN.membershiptest();
-		System.out.println("String inSet returns : " + TESTINCHECK);
+    public static void main(String[] args) {
 
+        String inSet = "{q0,q1,q2,q3,q4,q5,q6},{1,0},{e,0,$},{(q0,e,e)->(q1,$),(q1,e,e)->(q2,e),"
+                + "(q1,e,e)->(q4,e),(q2,1,e)->(q2,0),(q2,e,e)->(q3,e),(q2,e,e)->(q5,e),"
+                + "(q4,0,e)->(q2,0),(q4,e,e)->(q5,e),(q5,1,0)->(q5,e),(q3,0,0)->(q3,e),"
+                + "(q5,e,$)->(q6,e),(q3,e,$)->(q6,e)},q0,{q6},11111111111111";
+        newPDA testIN = new newPDA(inSet);
+        boolean TESTINCHECK = testIN.membershiptest();
+        System.out.println("String inSet returns : " + TESTINCHECK);
 
-		/*String notinSet = "{q0,q2,q3},{1},{e},{(q0,e,e)->(q2,e),(q0,1,e)->(q2,e),(q2,e,e)->(q0,e),(q2,1,e)->(q0,e)},q0,{q3},11111111111";
-		newPDA testOUT = new newPDA(notinSet);
-		boolean TESTOUTCHECK = testOUT.membershiptest();
-		System.out.println("String notinSet returns : " + TESTOUTCHECK);*/
+        String notinSet = "{q0,q2,q3},{1},{e},{(q0,e,e)->(q2,e),(q0,1,e)->(q2,e),(q2,e,e)->(q0,e),(q2,1,e)->(q0,e)},q0,{q3},11111111111";
+        newPDA testOUT = new newPDA(notinSet);
+        boolean TESTOUTCHECK = testOUT.membershiptest();
+        System.out.println("String notinSet returns : " + TESTOUTCHECK);
 
-	}
-
+    }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 String in1 = "{q0,q1,q2},{a,b},{e,a,b},{(q0,a,e)->(q1,a),(q1,a,a)->(q1,aa),(q1,b,a)->(q2,e),(q2,b,a)->(q2,e)},q0,{q2},aabb";
@@ -146,5 +128,4 @@ String in1 = "{q0,q1,q2},{a,b},{e,a,b},{(q0,a,e)->(q1,a),(q1,a,a)->(q1,aa),(q1,b
 		}
 		
 	}
-*/
-
+ */

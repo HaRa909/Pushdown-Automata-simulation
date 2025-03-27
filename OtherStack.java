@@ -1,8 +1,8 @@
 
 import java.util.Stack;
 
-public class OtherStack
-{
+public class OtherStack {
+
     String str;
     int ch;
     Stack<Character> charStack;
@@ -12,21 +12,17 @@ public class OtherStack
         this.ch = ch;
         this.charStack = charStack;
     }
-    public String state()
-    {
+
+    public String state() {
         return str;
     }
-    public int inputIndex()
-    {
+
+    public int inputIndex() {
         return ch;
     }
-    public Stack<Character> PDAstack()
-    {
+
+    public Stack<Character> PDAstack() {
         return charStack;
     }
 
-
-
-    
 }
-
