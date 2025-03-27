@@ -35,12 +35,30 @@ An example of a valid input string is:
 
 ## Processing of two example strings in this code
 
-# A string this returns true:
+# A string that returns true:
 
 `"{q0,q1,q2,q3,q4,q5,q6},{1,0},{e,0,$},{(q0,e,e)->(q1,$),(q1,e,e)->(q2,e),(q1,e,e)->(q4,e),(q2,1,e)->(q2,0),(q2,e,e)->(q3,e),(q2,e,e)->(q5,e),(q4,0,e)->(q2,0),(q4,e,e)->(q5,e),(q5,1,0)->(q5,e),(q3,0,0)->(q3,e),(q5,e,$)->(q6,e),(q3,e,$)->(q6,e)},q0,{q6},11111111111111"`
 
-**This string is an encoding of the following machine:**
+**This string is an encoding of the following machine and string to test on it:**
 ![Image](Images/string%20in%20PDA%20set.png)
+
+This will return true and we can prove why by tracing the computation. 
+
+1. We start at q0, epsilon transition to q1 and add a bottom of the stack indicator, epsilon transition to q2. 
+
+2. At q2 we will add 0 to the stack through the input 1 seven times, then we will pop 0 from the stack at input 1 seven times. 
+
+3. We will then pop the stack bottom indicator and be at q6, thus making this string a member of the A_PDA language.
+
+
+# A string that returns false:
+![Image](Images/notin%20PDA%20set.png)
+
+
+
+
+
+
 
 
 
