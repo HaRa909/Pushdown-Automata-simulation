@@ -40,7 +40,8 @@ An example of a valid input string is:
 `"{q0,q1,q2,q3,q4,q5,q6},{1,0},{e,0,$},{(q0,e,e)->(q1,$),(q1,e,e)->(q2,e),(q1,e,e)->(q4,e),(q2,1,e)->(q2,0),(q2,e,e)->(q3,e),(q2,e,e)->(q5,e),(q4,0,e)->(q2,0),(q4,e,e)->(q5,e),(q5,1,0)->(q5,e),(q3,0,0)->(q3,e),(q5,e,$)->(q6,e),(q3,e,$)->(q6,e)},q0,{q6},11111111111111"`
 
 **This string is an encoding of the following machine:**
-![Image](/Images/string in PDA set.png)
+![Image](Images/string%20in%20PDA%20set.png)
+
 
 
 
