@@ -33,9 +33,9 @@ An example of a valid input string is:
 
 `"{q0,q1,q2},{a,b},{e,a,b},{(q0,a,e)->(q1,a),(q1,a,a)->(q1,aa),(q1,b,a)->(q2,e),(q2,b,a)->(q2,e)},q0,{q2,q1},aabb"`
 
-## Processing of two example strings in this code
+# Processing of two example strings in this code
 
-# A string that returns true:
+## A string that returns true:
 
 `"{q0,q1,q2,q3,q4,q5,q6},{1,0},{e,0,$},{(q0,e,e)->(q1,$),(q1,e,e)->(q2,e),(q1,e,e)->(q4,e),(q2,1,e)->(q2,0),(q2,e,e)->(q3,e),(q2,e,e)->(q5,e),(q4,0,e)->(q2,0),(q4,e,e)->(q5,e),(q5,1,0)->(q5,e),(q3,0,0)->(q3,e),(q5,e,$)->(q6,e),(q3,e,$)->(q6,e)},q0,{q6},11111111111111"`
 
@@ -51,8 +51,18 @@ This will return true and we can prove why by tracing the computation.
 3. We will then pop the stack bottom indicator and be at q6, thus making this string a member of the A_PDA language.
 
 
-# A string that returns false:
+## A string that returns false:
+
+`"{q0,q2,q3},{1},{e},{(q0,e,e)->(q2,e),(q0,1,e)->(q2,e),(q2,e,e)->(q0,e),(q2,1,e)->(q0,e)},q0,{q3},11111111111"`
+
+**This string is an encoding of the following machine and string to test on it:**
 ![Image](Images/notin%20PDA%20set.png)
+
+We can prove why this doesn't return true very trivially, it is simply that there is no accept state that 'q0' or `q2` have a valid transition to, q3 is the only accept state and impossible to get to given any amount of time, meaning this string is not in the set.
+
+
+
+
 
 
 
