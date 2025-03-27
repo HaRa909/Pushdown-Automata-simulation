@@ -58,7 +58,7 @@ This will return true and we can prove why by tracing the computation.
 
 We can prove why this doesn't return true very trivially, it is simply that there is no accept state that `q0` or `q2` have a valid transition to, q3 is the only accept state and impossible to get to given any amount of time, meaning this string is not in the set.
 
-#Interesting Notes
+# Interesting Notes
 
 To deal with nondeterminism issues, an example of this being an endless loop of attempting epsilon/spontaneous transitions, the `OtherStack.java` file contains what is essentially a state of computation that is also places in a Hashset named `history`, this hashset tracks the amount of states the computation went through, the state it was in, the stack's size, and what was the top element of the stack. This ensures protection against cycles that could easily start with spontaneous transitions that there is no cost to get to. 
 
